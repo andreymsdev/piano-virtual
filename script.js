@@ -1,0 +1,29 @@
+const pianoKeys = document.querySelectorAll(".piano-keys .key"),
+      volumeSlider = document.querySelector(".volume-slider input"),
+      keysCheckbox = document.querySelector(".keys-checkbox input");
+let allKeys = [];
+const playTune = (key) => { // Função que toca o som de uma tecla
+    const audio = new Audio(`sounds/tunes/${key}.wav`);
+    audio.volume = volumeSlider.value; 
+    audio.play();   
+    const clickedKey = document.querySelector(`[data-key="${key}"]`);
+    clickedKey.classList.add("active");
+    setTimeout(() => clickedKey.classList.remove("active"), 150);
+};
+pianoKeys.forEach(key => {
+    allKeys.push(key.dataset.key);
+    key.addEventListener("click", () => playTune(key.dataset.key));
+});
+const handleVolume = (e) => {
+};
+const showHideKeys = () => {
+    pianoKeys.forEach(key => key.classList.toggle("hide"));
+};
+const pressedKey = (e) => {
+    if (allKeys.includes(e.key)) playTune(e.key);
+};
+keysCheckbox.addEventListener("click", showHideKeys);
+volumeSlider.addEventListener("input", handleVolume);
+document.addEventListener("keydown", pressedKey);
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Piano Virtual</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport">
+    <script src="script.js" defer></script> <!--link do java script-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+      <h2>PIANO VIRTUAL</h2>
+      <div class="column volume-slider">
+      <span>Volume</span><input type="range" min="0" max="1" value="0.5" step="any">
+      </div>
+      <div class="column keys-checkbox">
+        <span>Mostrar Teclas</span><input type="checkbox" checked>
+      </div>
+      </header>
+    <ul class="piano-keys">
+      <!--teclas brancas e pretas-->
+      <li class="key white" data-key="a"><span>a</span></li> 
+    <li class="key black" data-key="w"><span>w</span></li>
+      <li class="key white" data-key="s"><span>s</span></li>
+      <li class="key black" data-key="e"><span>e</span></li>
+      <li class="key white" data-key="d"><span>d</span></li>
+      <li class="key white" data-key="f"><span>f</span></li>
+      <li class="key black" data-key="t"><span>t</span></li>
+      <li class="key white" data-key="g"><span>g</span></li>
+      <li class="key black" data-key="y"><span>y</span></li>
+      <li class="key white" data-key="h"><span>h</span></li>
+      <li class="key black" data-key="u"><span>u</span></li>
+      <li class="key white" data-key="j"><span>j</span></li>
+      <li class="key white" data-key="k"><span>k</span></li>
+      <li class="key black" data-key="o"><span>o</span></li>
+      <li class="key white" data-key="l"><span>l</span></li>
+      <li class="key black" data-key="p"><span>p</span></li>
+      <li class="key white" data-key=";"><span>;</span></li>
+      </ul>
+      <input type="checkbox" id="toggle-songs" class="toggle-songs">
+<label for="toggle-songs" class="toggle-label">🎵 Mostrar músicas</label>
+
+<div class="song-guide">
+  <div class="song">
+    <strong>🎵 Super Mario Bros Theme:</strong>
+    <p>D D D - A D G - G</p>
+    <p>G A G - D H H G</p>
+    <p>D G H - F G D - A S J</p>
+    <p style="font-size: 0.9rem; color: #888;"></p>
+  </div>
+  <div class="song">
+    <strong>🎵 Canção Teste:</strong>
+    <p>A S D F G | G F D S A</p>
+  </div>
+</div>
+    </div>
+    
+  </body>
+</html>
