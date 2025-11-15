@@ -10,7 +10,7 @@
 - **Design Responsivo**: Funciona bem em dispositivos móveis e desktops.
 - **Toque de Notas com Sons `.wav`**: Sons realistas ao tocar as teclas.
 
-## 🛠️ Tecnologias Usadas
+##  Tecnologias Usadas
 
 - **HTMl**: Esqueleto da página
 - **CSS3**: Estilização das teclas do piano e responsividade.
